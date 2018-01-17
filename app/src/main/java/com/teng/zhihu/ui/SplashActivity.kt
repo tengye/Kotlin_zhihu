@@ -52,8 +52,10 @@ class SplashActivity : FragmentActivity() {
         set.start()
 
         set.addListener(object : Animator.AnimatorListener{
-            override fun onAnimationEnd(animator: Animator) {
-                go2MainActivity()
+            override fun onAnimationEnd(animator: Animator?) {
+                val intent = Intent(this@SplashActivity, MainActivity::class.java)
+                startActivity(intent)
+                this@SplashActivity.finish()
             }
 
             override fun onAnimationRepeat(p0: Animator?) {
@@ -69,11 +71,4 @@ class SplashActivity : FragmentActivity() {
             }
         })
     }
-
-    private fun go2MainActivity(){
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        this.finish()
-    }
-
 }
