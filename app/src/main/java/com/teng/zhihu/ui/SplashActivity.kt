@@ -58,17 +58,11 @@ class SplashActivity : FragmentActivity() {
                 this@SplashActivity.finish()
             }
 
-            override fun onAnimationRepeat(p0: Animator?) {
-                TODO("not implemented")
-            }
+            override fun onAnimationRepeat(p0: Animator?): Unit = TODO("not implemented")
 
-            override fun onAnimationStart(p0: Animator?) {
-                TODO("not implemented")
-            }
+            override fun onAnimationStart(p0: Animator?): Unit = TODO("not implemented")
 
-            override fun onAnimationCancel(p0: Animator?) {
-                TODO("not implemented")
-            }
+            override fun onAnimationCancel(p0: Animator?): Unit = TODO("not implemented")
         })
     }
 }

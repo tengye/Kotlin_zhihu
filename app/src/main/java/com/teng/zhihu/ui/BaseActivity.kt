@@ -19,7 +19,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     protected fun setTitle(title : String){
-        supportActionBar!!.setTitle(title)
+        supportActionBar!!.title = title
     }
 
 
