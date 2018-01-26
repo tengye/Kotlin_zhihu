@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.people_info.view.*
 class PeopleListAdapter(private var context: Context, var data: MutableList<UserEntity>) : RecyclerView.Adapter<PeopleListAdapter.PeopleViewHolder>() {
 
 
-    override fun getItemCount(): Int = data!!.size
+    override fun getItemCount(): Int = data.size
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): PeopleViewHolder{
         val binding = DataBindingUtil.inflate<PeopleInfoBinding>(LayoutInflater.from(context), R.layout.people_info, parent, false)
@@ -27,7 +27,7 @@ class PeopleListAdapter(private var context: Context, var data: MutableList<User
     }
 
     override fun onBindViewHolder(holder: PeopleViewHolder?, position: Int) {
-        val userEntity = data!![position]
+        val userEntity = data[position]
         holder!!.binding!!.user = userEntity
         val picUrl:String  = Utils.getAuthorAvatarUrl(userEntity.avatarTemplate,
         userEntity.avatarId, ZhihuApi.PIC_SIZE_XL)
