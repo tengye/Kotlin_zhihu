@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kotlin-知乎专栏</string>
+    <string name="follower">%d flowers</string>
+    <string name="post_count" translatable="false">%d 文</string>
 </resources>

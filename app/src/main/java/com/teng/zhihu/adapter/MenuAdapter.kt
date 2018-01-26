@@ -26,6 +26,6 @@ class MenuAdapter(private var context: Context?, val data: MutableList<DrawerMen
 
     override fun getItemCount(): Int = data!!.size
 
-    class MenuViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView)
+    inner class MenuViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView)
 
 }

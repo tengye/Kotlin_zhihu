@@ -19,6 +19,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding{
+        enabled true
+    }
+}
+
+kapt {
+    generateStubs = true
 }
 
 dependencies {
@@ -27,11 +34,14 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     compile 'io.bxbxbai:common:1.6.1'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    kapt 'com.android.databinding:compiler:2.3.0-alpha3'
     testCompile 'junit:junit:4.12'
 }
 repositories {

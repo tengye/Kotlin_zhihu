@@ -27,6 +27,9 @@ class MainActivity : BaseActivity() {
         drawerList.adapter = MenuAdapter(this, content.items)
 
         initToolBarAndDrawer()
+
+        supportFragmentManager.beginTransaction().add(R.id.container, PeopleListFragment()).commit()
+
     }
 
     private fun initToolBarAndDrawer(){
